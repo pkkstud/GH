@@ -1,15 +1,119 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: grid;
-    grid-template-rows: 1fr;
+    color: #1B203D;
+    background-color: #FFFFFF;
+    background-image: radial-gradient(#FFFFFF, #BAC5CF)
 }
 
 header,
 h1 {
-    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 36px;
 }
 
-nav {
+
+header {
+    height: 120px;
+    width: 100%;
+    background-color: #BAC5CF;
+    display: flex;
+}
+
+.header_logo {
+    max-height: 10%;
+    width: 10%;
+}
+
+.header_top {
+    max-height: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: none;
+}
+
+nav ul {
+    /* margin: 0%; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0%
+}
+
+
+nav li {
+    display: inline;
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0%;
+}
+
+header a {
+    color: #1B203D;
+}
+
+.carousel {
+    width: auto;
+    height: 250px;
+    background-color: #1B203D;
+    color: #FFFFFF;
+    font-size: 36px;
+}
+
+.carousel p {
+    text-align: center;
+    padding: 3% 3%;
+}
+
+.carousel a {
+    padding: 3%;
+}
+
+.carousel_buttons {
+    display: flex;
+    justify-content: right;
+}
+
+/* h1 {
+    text-align: center;
+} */
+
+.side {
+    width: 20%;
+}
+
+.main_width {
+    width: 60%
+}
+
+main {
+    display: flex;
+}
+
+.bestsellers_list {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.bestsellers_cover {
+    height: auto;
+    width: 80%;
+}
+
+.bestsellers_info {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* nav {
     display: none;
 }
 
@@ -19,4 +123,4 @@ nav {
 
 #menu:checked~nav {
     display: block;
-}
+} */

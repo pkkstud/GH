@@ -12,9 +12,12 @@
 
 <body>
   <header>
-    <div>
-      <section>
-        <img src=images/GameHub_Logo-300.png class="logo" href=index.html alt="GameHub logo">
+    <div class="side"></div>
+    <div class="main_width">
+      <section class="header_top">
+
+        <img src=images/GameHub_Logo-300.png href=index.html alt="GameHub logo" class="header_logo">
+
         <form class="search">
           <input type="text" placeholder="Search games" name="search">
           <button type="submit"><i class="fas fa-search"></i> </button>
@@ -22,76 +25,94 @@
         <a href=> Sell</a>
         <i class="fa fa-shopping-cart"></i>
         <i class="fas fa-user"></i>
-        <label for="menu"><i class="fas fa-bars"></i></label>
-        <input type="checkbox" id="menu" />
-        <nav>
-          <ul>
-            <li><a href=>News</a></li>
-            <li><a href=>Action</a> </li>
-            <li><a href=>Adventure</a></li>
-            <li><a href=>Racing</a></li>
-            <li><a href=>RPG</a></li>
-            <li><a href=>Sport</a></li>
-            <li><a href=>Shooter</a></li>
-            <li><a href=>Strategy</a></li>
-          </ul>
-        </nav>
+        <div class="menu">
+          <label for="menu"><i class="fas fa-bars"></i></label>
+          <input type="checkbox" id="menu" />
+        </div>
       </section>
+      <nav>
+        <ul>
+          <li><a href=>News</a></li>
+          <li><a href=>Action</a> </li>
+          <li><a href=>Adventure</a></li>
+          <li><a href=>Racing</a></li>
+          <li><a href=>RPG</a></li>
+          <li><a href=>Sport</a></li>
+          <li><a href=>Shooter</a></li>
+          <li><a href=>Strategy</a></li>
+        </ul>
+      </nav>
+
     </div>
+    <div class="side"></div>
   </header>
 
+
   <main>
-    <section>
-      <p>Earn money by selling your games</p>
-      <a href="" class="cta">Create account</a>
-      <a href="" class="sign-in">Sign in</a>
-    </section>
-    <h1>Bestsellers this week</h1>
-    <section>
-      <div>
-        <img src="images/GameHub_covers187.jpg" alt="Picture of Ping pong cover" />
-        <p>Used</p>
-        <p>$49.99</p>
-        <p class="old-price">$59.99</p>
-        <a href="" class="cta cta-cart">Buy</a>
-      </div>
-      <div>
-        <img src="images/GameHub_covers2-187.jpg" alt="Picture of Super duper cover" />
-        <p>Used</p>
-        <p>$49.99</p>
-        <p class="old-price">$59.99</p>
-        <a href="" class="cta cta-cart">Buy</a>
-      </div>
-      <div>
-        <img src="images/GameHub_covers3-187.jpg" alt="Picture of Black cover" />
-        <p>Used</p>
-        <p>$49.99</p>
-        <p class="old-price">$59.99</p>
-        <a href="" class="cta cta-cart">Buy</a>
-      </div>
-      <div>
-        <img src="images/GameHub_covers4-187.jpg" alt="Picture of Furious cover" />
-        <p>Used</p>
-        <p>$49.99</p>
-        <p class="old-price">$59.99</p>
-        <a href="" class="cta cta-cart">Buy</a>
-      </div>
-      <div>
-        <img src="images/GameHub_covers5-187.jpg" alt="Picture of Assassin cover" />
-        <p>Used</p>
-        <p>$49.99</p>
-        <p class="old-price">$59.99</p>
-        <a href="" class="cta cta-cart">Buy</a>
-      </div>
-      <div>
-        <img src="images/GameHub_covers6-187.jpg" alt="Picture of Space war cover" />
-        <p>Used</p>
-        <p>$49.99</p>
-        <p class="old-price">$59.99</p>
-        <a href="" class="cta cta-cart">Buy</a>
-      </div>
-    </section>
+    <div class="side"></div>
+    <div class="main_width">
+      <section class="carousel">
+        <p>Earn money by selling your games</p>
+        <div class="carousel_buttons">
+          <a href="" class="cta">Create account</a>
+          <a href="" class="sign-in">Sign in</a>
+        </div>
+      </section>
+      <h1>Bestsellers this week</h1>
+      <section class="bestsellers_list">
+        <div>
+          <div>
+            <img src="images/GameHub_covers.jpg" alt="Picture of Ping pong cover" class="bestsellers_cover" />
+          </div>
+          <div class="bestsellers_info">
+            <div class="bestsellers_price">
+              <p>Used</p>
+              <p>$49.99</p>
+            </div>
+            <p class="old-price">$59.99</p>
+            <a href="" class="cta cta-cart">Buy</a>
+          </div>
+        </div>
+        <div>
+          <img src="images/GameHub_covers2.jpg" alt="Picture of Super duper cover" class="bestsellers_cover" />
+          <p>Used</p>
+          <p>$49.99</p>
+          <p class="old-price">$59.99</p>
+          <a href="" class="cta cta-cart">Buy</a>
+        </div>
+        <div>
+          <img src="images/GameHub_covers3.jpg" alt="Picture of Black cover" class="bestsellers_cover" />
+          <p>Used</p>
+          <p>$49.99</p>
+          <p class="old-price">$59.99</p>
+          <a href="" class="cta cta-cart">Buy</a>
+        </div>
+        <div>
+          <img src="images/GameHub_covers4.jpg" alt="Picture of Furious cover" class="bestsellers_cover" />
+          <p>Used</p>
+          <p>$49.99</p>
+          <p class="old-price">$59.99</p>
+          <a href="" class="cta cta-cart">Buy</a>
+        </div>
+        <div>
+          <img src="images/GameHub_covers5.jpg" alt="Picture of Assassin cover" class="bestsellers_cover" />
+          <p>Used</p>
+          <p>$49.99</p>
+          <p class="old-price">$59.99</p>
+          <a href="" class="cta cta-cart">Buy</a>
+        </div>
+        <div>
+          <img src="images/GameHub_covers6.jpg" alt="Picture of Space war cover" class="bestsellers_cover" />
+          <p>Used</p>
+          <p>$49.99</p>
+          <p class="old-price">$59.99</p>
+          <a href="" class="cta cta-cart">Buy</a>
+        </div>
+      </section>
+    </div>
+    <div class="side"></div>
   </main>
+
 
   <footer> Copyright &copy;</footer>
 </body>
