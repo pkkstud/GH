@@ -180,6 +180,63 @@ footer {
     margin-top: 60px;
 }
 
+
+@media only screen and (max-width: 900px) {
+    nav {
+        display: none;
+    }
+
+    header {
+        height: 50px;
+    }
+
+    .menu {
+        display: inline-block;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .menu:checked~nav {
+        display: block;
+    }
+
+    .bestsellers_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .search_field,
+    .carousel {
+        display: none;
+    }
+
+    header {
+        padding-top: 2%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .side {
+        display: none
+    }
+
+
+    .main_width {
+        width: 100%;
+    }
+
+    body {
+        margin: 0 2% 0 2%;
+    }
+
+
+
+}
+
 /* nav {
     display: none;
 }
