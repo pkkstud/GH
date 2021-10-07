@@ -2,18 +2,21 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #1B203D;
     background-color: #FFFFFF;
-    background-image: radial-gradient(#FFFFFF, #BAC5CF)
+    background-image: radial-gradient(#FFFFFF, #BAC5CF);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 header,
 h1 {
     font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2.25rem;
+    font-size: 5vh;
 }
 
 
 header {
-    height: 120px;
+    height: 10%;
     width: 100%;
     background-color: #BAC5CF;
     display: flex;
@@ -32,25 +35,34 @@ header {
     padding: 1% 0% 0% 0%
 }
 
+.search {
+    height: 5vh;
+    width: auto;
+}
+
 .search_field {
-    height: 41px;
+    height: 93%;
     width: auto;
 
 }
 
-form input {
+form input,
+button {
     float: left;
     border: none;
     border-radius: 0%;
 }
 
 form button {
-    float: left;
-    height: 43px;
+    height: 100%;
     width: 40px;
     background-color: #FFFFFF;
-    border: none;
-    border-radius: 0%;
+
+}
+
+i,
+img {
+    cursor: pointer;
 }
 
 .menu {
@@ -61,13 +73,13 @@ nav ul {
     margin: 0%;
     display: flex;
     justify-content: space-between;
-    padding: 2% 0% 0% 0%
+    padding: 2% 0% 0.5% 0%
 }
 
 
 nav li {
     display: inline;
-    font-size: 1.75rem;
+    font-size: 4vh;
 }
 
 a {
@@ -84,16 +96,20 @@ header a {
 
 .carousel {
     width: auto;
-    height: 250px;
+    height: 20%;
     background-color: #1B203D;
     color: #FFFFFF;
-    font-size: 2.25rem;
+    font-size: 5vh;
 }
 
 .carousel p {
     text-align: center;
     padding: 3% 3%;
     margin: 0 0 3% 0;
+}
+
+.carousel a {
+    font-size: 4vh;
 }
 
 h1 {
@@ -153,6 +169,15 @@ main {
     border-radius: 0%;
     border: #1B203D;
     padding: 2%;
+}
+
+footer {
+    height: 25px;
+    width: 100%;
+    background-color: #BAC5CF;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 60px;
 }
 
 /* nav {
