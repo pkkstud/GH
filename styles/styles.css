@@ -16,10 +16,68 @@ h1 {
 
 
 header {
-    height: 10%;
+    height: 16%;
     width: 100%;
     background-color: #BAC5CF;
     display: flex;
+    position: fixed;
+}
+
+form input,
+button {
+    float: left;
+    border: none;
+    border-radius: 0%;
+}
+
+form button {
+    height: 100%;
+    width: 40px;
+    background-color: #FFFFFF;
+
+}
+
+i,
+img {
+    cursor: pointer;
+}
+
+nav li {
+    display: inline;
+    font-size: 4vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0%;
+}
+
+header a {
+    color: #1B203D;
+}
+
+nav ul {
+    margin: 0%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0% 0.5% 0%
+}
+
+main {
+    display: flex;
+    margin-top: 8%;
+}
+
+footer {
+    height: 25px;
+    width: 100%;
+    background-color: #BAC5CF;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 60px;
 }
 
 .header_logo {
@@ -46,53 +104,11 @@ header {
 
 }
 
-form input,
-button {
-    float: left;
-    border: none;
-    border-radius: 0%;
-}
-
-form button {
-    height: 100%;
-    width: 40px;
-    background-color: #FFFFFF;
-
-}
-
-i,
-img {
-    cursor: pointer;
-}
-
 .menu {
     display: none;
 }
 
-nav ul {
-    margin: 0%;
-    display: flex;
-    justify-content: space-between;
-    padding: 2% 0% 0.5% 0%
-}
 
-
-nav li {
-    display: inline;
-    font-size: 4vh;
-}
-
-a {
-    text-decoration: none;
-}
-
-p {
-    margin: 0%;
-}
-
-header a {
-    color: #1B203D;
-}
 
 .carousel {
     width: auto;
@@ -132,10 +148,6 @@ h1 {
     width: 60%
 }
 
-main {
-    display: flex;
-}
-
 .bestsellers_list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -163,6 +175,11 @@ main {
     padding: 2%;
 }
 
+main .fa-shopping-cart {
+    padding: 4%;
+}
+
+
 .sign_in {
     color: #1B203D;
     background-color: #BAC5CF;
@@ -171,14 +188,6 @@ main {
     padding: 2%;
 }
 
-footer {
-    height: 25px;
-    width: 100%;
-    background-color: #BAC5CF;
-    text-align: center;
-    flex-shrink: 0;
-    margin-top: 60px;
-}
 
 
 @media only screen and (max-width: 900px) {
@@ -220,10 +229,13 @@ footer {
 
 @media only screen and (max-width: 600px) {
 
-    .side {
-        display: none
-    }
 
+
+    .bestsellers_list {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
 
     .main_width {
         width: 100%;
