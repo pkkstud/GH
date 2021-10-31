@@ -1,3 +1,5 @@
+/* Element styling */
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #1B203D;
@@ -11,16 +13,17 @@ body {
 header,
 h1 {
     font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 5vh;
+    font-size: 2rem;
 }
 
 
 header {
-    height: 16%;
+    height: 8rem;
     width: 100%;
     background-color: #BAC5CF;
     display: flex;
     position: fixed;
+    justify-content: center;
 }
 
 form input,
@@ -44,7 +47,7 @@ img {
 
 nav li {
     display: inline;
-    font-size: 4vh;
+    font-size: 1.5rem;
 }
 
 a {
@@ -68,7 +71,8 @@ nav ul {
 
 main {
     display: flex;
-    margin-top: 8%;
+    margin-top: 8rem;
+    justify-content: center;
 }
 
 footer {
@@ -80,13 +84,15 @@ footer {
     margin-top: 60px;
 }
 
+/* Class styling */
+
 .header_logo {
-    max-height: 10%;
-    width: 10%;
+    height: 4rem;
+    width: 6rem;
 }
 
 .header_top {
-    max-height: 50%;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -94,7 +100,7 @@ footer {
 }
 
 .search {
-    height: 5vh;
+    height: 2rem;
     width: auto;
 }
 
@@ -140,9 +146,6 @@ h1 {
     margin-right: 5%;
 }
 
-.side {
-    width: 20%;
-}
 
 .main_width {
     width: 60%
@@ -188,6 +191,56 @@ main .fa-shopping-cart {
     padding: 2%;
 }
 
+/* category page */
+
+select {
+    border-radius: 0%;
+    border: none;
+    height: 2rem;
+}
+
+h3 {
+    margin: 0%;
+}
+
+.filter_sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+
+}
+
+.filter {
+    display: flex;
+    flex-grow: 2;
+    justify-content: left;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.sort {
+    display: flex;
+    justify-content: right;
+    flex-grow: 1;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.clear_list {
+    text-decoration: underline;
+}
+
+/* Game details page */
+
+
+
+.yellow {
+    color: #FFC400;
+}
+
+.white {
+    color: #FFFFFF;
+}
 
 
 @media only screen and (max-width: 900px) {
@@ -195,20 +248,12 @@ main .fa-shopping-cart {
         display: none;
     }
 
-    header {
+    /* header {
         height: 50px;
-    }
+    } */
 
     .menu {
         display: inline-block;
-    }
-
-    #menu {
-        display: none;
-    }
-
-    .menu:checked~nav {
-        display: block;
     }
 
     .bestsellers_list {
@@ -237,9 +282,9 @@ main .fa-shopping-cart {
 
     }
 
-    .main_width {
-        width: 100%;
-    }
+    /* .main_width {
+        width: 80%;
+    } */
 
     body {
         margin: 0 2% 0 2%;
@@ -248,15 +293,3 @@ main .fa-shopping-cart {
 
 
 }
-
-/* nav {
-    display: none;
-}
-
-#menu {
-    display: none;
-}
-
-#menu:checked~nav {
-    display: block;
-} */
