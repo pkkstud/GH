@@ -16,6 +16,9 @@ h1 {
     font-size: 2rem;
 }
 
+h2 {
+    margin: 0;
+}
 
 header {
     height: 8rem;
@@ -234,13 +237,97 @@ h3 {
 
 
 
-.yellow {
+.yellow_star {
     color: #FFC400;
 }
 
-.white {
+.white_star {
     color: #FFFFFF;
 }
+
+.rating {
+    margin: 2% 0%;
+}
+
+.new_old_buttons {
+    margin-top: 6%;
+    margin-bottom: 6%;
+    text-align: end;
+}
+
+.selected_button {
+    color: #1B203D;
+    background-color: #FFFFFF;
+    border-radius: 0%;
+    border: #1B203D;
+    padding: 2%;
+    text-decoration: underline;
+}
+
+.not_selected_button {
+    color: #FFFFFF;
+    background-color: #1B203D;
+    border-radius: 0%;
+    border: #1B203D;
+    padding: 2%;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 0.5fr;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    justify-content: space-between;
+}
+
+/* Log in page */
+
+.log_in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Account page */
+
+.account {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4rem;
+    row-gap: 2rem;
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Contact page */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 20rem;
+}
+
+.email {
+    border: #1B203D;
+    width: 12rem;
+}
+
+.message {
+    border: #1B203D;
+    width: 20rem;
+}
+
+.send {
+    width: 2.5rem;
+    align-self: flex-end;
+}
+
 
 
 @media only screen and (max-width: 900px) {
@@ -248,18 +335,23 @@ h3 {
         display: none;
     }
 
-    /* header {
-        height: 50px;
-    } */
+    header {
+        height: 5rem;
+    }
 
     .menu {
         display: inline-block;
     }
 
-    .bestsellers_list {
+    .bestsellers_list,
+    .account {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+    }
+
+    .details {
+        grid-template-columns: 1fr
     }
 
     .search_field,
@@ -276,7 +368,8 @@ h3 {
 
 
 
-    .bestsellers_list {
+    .bestsellers_list,
+    .account {
         display: grid;
         grid-template-columns: 1fr;
 

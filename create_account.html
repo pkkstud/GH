@@ -5,7 +5,7 @@
     <meta name:"description" content="Buy or sell games at GameHub - The Universe of Games" />
     <meta name:"viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>GameHub</title>
+    <title>Create account</title>
     <link href="styles/styles.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/c279bd19f7.js" crossorigin="anonymous"></script>
 </head>
@@ -16,15 +16,16 @@
         <div class="main_width">
             <section class="header_top">
 
-                <img src=images/GameHub_Logo-300.png href=index.html alt="GameHub logo" class="header_logo">
+                <a href="index.html" title="Homepage"><img src=images/GameHub_Logo-300.png alt="GameHub logo"
+                        class="header_logo"></a>
 
                 <form class="search">
                     <input type="text" placeholder="Search games" name="search" class="search_field">
                     <button type="submit"><i class="fas fa-search"></i> </button>
                 </form>
-                <a href=> Sell</a>
-                <i class="fa fa-shopping-cart"></i>
-                <i class="fas fa-user"></i>
+                <a href="sell-game.html" title="Sell games"> Sell</a>
+                <a href="checkout.html" title="Shopping cart"><i class="fa fa-shopping-cart"></i></a>
+                <a href="sign-in.html" title="Account"><i class="fas fa-user"></i></a>
                 <div class="menu">
                     <label for="menu"><i class="fas fa-bars"></i></label>
                 </div>
@@ -32,7 +33,7 @@
             <nav>
                 <ul>
                     <li><a href="category.html" title="New games">News</a></li>
-                    <li><a href="category.html" title="Action games">Action</a> </li>
+                    <li><a href="category.html" title="Action games" class="active">Action</a> </li>
                     <li><a href="category.html" title="Adventure games">Adventure</a></li>
                     <li><a href="category.html" title="Racing games">Racing</a></li>
                     <li><a href="category.html" title="RPG games">RPG</a></li>
@@ -46,6 +47,25 @@
         <div></div>
     </header>
 
-
     <main>
         <div></div>
+        <div class="main_width">
+
+
+            <h1>Create account</h1>
+            <form class="log_in">
+                <input type="email" placeholder="Your email address">
+                <input type="password" placeholder="Password">
+                <a href="account.html" title="log in" class="cta">Create</a>
+                <a href="log_in.html" title="create account">Already have an account? Log in here.</a>
+            </form>
+
+
+            <div></div>
+    </main>
+
+
+    <footer> Copyright &copy;</footer>
+</body>
+
+</html>
