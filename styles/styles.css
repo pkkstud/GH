@@ -101,6 +101,7 @@ footer {
 .header_logo {
     height: 4rem;
     width: 6rem;
+    display: block;
 }
 
 .header_top {
@@ -313,7 +314,7 @@ h3 {
     gap: 1rem;
 }
 
-/* Checkout page */
+/* Checkout ans sell pages */
 
 .checkout {
     display: grid;

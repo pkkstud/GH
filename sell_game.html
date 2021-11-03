@@ -5,7 +5,7 @@
     <meta name:"description" content="Buy or sell games at GameHub - The Universe of Games" />
     <meta name:"viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>Checkout</title>
+    <title>Sell games</title>
     <link href="styles/styles.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/c279bd19f7.js" crossorigin="anonymous"></script>
 </head>
@@ -52,21 +52,18 @@
         <div></div>
         <div class="main_width">
 
-            <h1>Checkout</h1>
+            <h1>Sell games</h1>
 
             <form class="checkout">
                 <div class="flex_col">
-                    <h2>Shipping Address</h2>
-                    <input type="text" placeholder="Address">
-                    <input type="text" placeholder="Address 2">
-                    <input type="text" placeholder="Postal code">
-                    <input type="text" placeholder="City">
+                    <h2>Game information</h2>
+                    <input type="select" name="category" placeholder="Genre">
+                    <input type="select" name="game_name" placeholder="Game">
+                    <button type="submit" name="submit_game" class="cta">Add</buttom>
 
-                    <h2>Credit card information</h2>
-                    <input type="text" placeholder="Card number">
-                    <input type="text" placeholder="Cardholder name">
-                    <input type="text" placeholder="Expire date">
-                    <input type="text" placeholder="CVV">
+                        <h2>Deposit information</h2>
+                        <input type="text" name="bank_account_number" placeholder="Bank account number">
+                        <input type="text" name="bankaccout_holder" placeholder="Bankaccout holder">
                 </div>
 
                 <div>
@@ -81,7 +78,7 @@
                                 <button type="button" name="reduce-games">-</button>
                             </div>
                         </div>
-                        <span class="sum_each_game">59.90$</span>
+                        <span class="sum_each_game">9.99$</span>
                     </div>
                     <div class="summary_games">
                         <img src="images/GameHub_covers2.jpg" alt="Picture of Super Duper cover"
@@ -94,13 +91,13 @@
                                 <button type="button" name="reduce-games">-</button>
                             </div>
                         </div>
-                        <span class="sum_each_game">49.90$</span>
+                        <span class="sum_each_game">9.99$</span>
                     </div>
                     <div class="sum_order">
                         <span>Sum order</span>
-                        <span>109.98$</span>
+                        <span>19.98$</span>
                     </div>
-                    <a href="checkout_success.html" title="place order button" class="cta order">Place order</a>
+                    <a href="sell_game_success.html" title="place order button" class="cta order">Place order</a>
                 </div>
 
 
