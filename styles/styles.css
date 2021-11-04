@@ -420,7 +420,6 @@ h3 {
 @media only screen and (max-width: 900px) {
 
     nav,
-    .envelope,
     .fa-shopping-cart,
     .fa-user {
         display: none;
@@ -434,14 +433,14 @@ h3 {
         display: inline-block;
     }
 
-    .bestsellers_list,
-    .account {
+    .bestsellers_list {
         display: grid;
         grid-template-columns: 1fr 1fr;
 
     }
 
-    .details {
+    .details,
+    .account {
         grid-template-columns: 1fr
     }
 
