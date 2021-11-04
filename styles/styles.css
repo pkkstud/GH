@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    min-height: 100vh;
 }
 
 header,
@@ -34,13 +35,28 @@ button {
     float: left;
     border: none;
     border-radius: 0%;
+    background-color: #FFFFFF;
 }
 
-form button {
-    height: 100%;
-    width: 40px;
-    background-color: #FFFFFF;
+main {
+    margin-bottom: 3rem;
+}
 
+main input {
+    border: 1px solid #1B203D;
+    height: 1.5rem;
+    width: 15rem;
+}
+
+main select {
+    border: 1px solid #1B203D;
+    height: 1.5rem;
+}
+
+.search_button {
+    height: 2rem;
+    width: 40px;
+    padding: 0%;
 }
 
 i,
@@ -84,7 +100,7 @@ footer {
     background-color: #BAC5CF;
     text-align: center;
     flex-shrink: 0;
-    margin-top: 60px;
+    margin-top: auto;
 }
 
 /* Class styling */
@@ -115,12 +131,13 @@ footer {
 .search {
     height: 2rem;
     width: auto;
+
 }
 
 .search_field {
-    height: 93%;
+    height: 100%;
     width: auto;
-
+    padding: 0%;
 }
 
 .menu {
@@ -187,7 +204,7 @@ h1 {
     color: #1B203D;
     background-color: #FFC400;
     border-radius: 0%;
-    border: 1px #1B203D;
+    border: 1px solid #1B203D;
     padding: 2%;
 }
 
@@ -290,7 +307,7 @@ h3 {
     justify-content: space-between;
 }
 
-/* Log in page */
+/* Log in-create account page */
 
 .log_in {
     display: flex;
@@ -299,11 +316,15 @@ h3 {
     gap: 1rem;
 }
 
+.center {
+    text-align: center;
+}
+
 /* Account page */
 
 .account {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 4rem;
     row-gap: 2rem;
 }
@@ -314,7 +335,12 @@ h3 {
     gap: 1rem;
 }
 
-/* Checkout ans sell pages */
+.save_account {
+    width: 5rem;
+    height: 2rem;
+}
+
+/* Checkout and sell pages */
 
 .checkout {
     display: grid;
@@ -329,7 +355,7 @@ h3 {
 
 .summary_games {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.9fr 1.4fr 0.6fr;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -392,7 +418,11 @@ h3 {
 
 
 @media only screen and (max-width: 900px) {
-    nav {
+
+    nav,
+    .envelope,
+    .fa-shopping-cart,
+    .fa-user {
         display: none;
     }
 

@@ -21,7 +21,7 @@
 
                 <form class="search">
                     <input type="text" placeholder="Search games" name="search" class="search_field">
-                    <button type="submit"><i class="fas fa-search"></i> </button>
+                    <button type="submit" class="search_button"><i class="fas fa-search"></i> </button>
                 </form>
                 <a href="sell_game.html" title="Sell games"> Sell</a>
                 <a href="checkout.html" title="Shopping cart"><i class="fa fa-shopping-cart"></i></a>
@@ -55,42 +55,41 @@
 
             <form class="account">
                 <div class="flex_col">
-                    <input type="email" placeholder="Email address">
-                    <input type="password" placeholder="Password">
+                    <input type="email" name="name" placeholder="Email address">
+                    <input type="password" name="password" placeholder="Password">
                 </div>
                 <div class="flex_col">
-                    <input type="text" placeholder="First name">
-                    <input type="text" placeholder="Last name">
+                    <input type="text" name="first_name" placeholder="First name">
+                    <input type="text" name="last_name" placeholder="Last name">
                 </div>
-                <div></div>
+
 
                 <div class="flex_col">
                     <h2>Address</h2>
-                    <input type="text" placeholder="Address">
-                    <input type="text" placeholder="Address 2">
-                    <input type="text" placeholder="Postal code">
-                    <input type="text" placeholder="City">
+                    <input type="text" name="address" placeholder="Address">
+                    <input type="text" name="address2" placeholder="Address 2">
+                    <input type="text" name="postal" placeholder="Postal code">
+                    <input type="text" name="city" placeholder="City">
                 </div>
 
                 <div class="flex_col">
                     <h2>Billing information</h2>
-                    <input type="text" placeholder="Card number">
-                    <input type="text" placeholder="Cardholder name">
-                    <input type="text" placeholder="Expire date">
-                    <input type="text" placeholder="CVV">
+                    <input type="text" name="card_number" placeholder="Card number">
+                    <input type="text" name="cardholder_name" placeholder="Cardholder name">
+                    <input type="text" name="expire_date" placeholder="Expire date">
+                    <input type="text" name="cvv" placeholder="CVV">
                 </div>
-                <div></div>
+
                 <div class="flex_col">
                     <h2>Deposit information</h2>
-                    <p>Enter your bank information to get payment from GameHub</p>
                     <input type="text" placeholder="Bank account">
                     <input type="text" placeholder="Accountholders name">
                 </div>
-                <a href="account.html" title="save information" class="cta">Save</a>
+                <button type="submit" title="save information" class="cta save_account">Save</button>
             </form>
+        </div>
 
-
-            <div></div>
+        <div></div>
     </main>
 
 
