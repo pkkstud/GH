@@ -453,7 +453,7 @@ Contact page
     .icon,
     .filter,
     .sort {
-        display: none !important;
+        display: none;
     }
 
     .filter_icon {
@@ -501,10 +501,6 @@ Contact page
         grid-template-columns: 1fr;
 
     }
-
-    /* .main_width {
-        width: 80%;
-    } */
 
     body {
         margin: 0 2% 0 2%;
