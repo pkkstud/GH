@@ -19,8 +19,10 @@
                         class="header_logo"></a>
 
                 <form class="search">
-                    <input type="text" placeholder="Search games" name="search" class="search_field">
-                    <button type="submit" class="search_button"><i class="fas fa-search"></i> </button>
+                    <input type="text" placeholder="Search games" name="search" title="Search field"
+                        class="search_field">
+                    <button type="submit" class="search_button" title="Search button"><i class="fas fa-search"></i>
+                    </button>
                 </form>
                 <a href="sell_game.html" title="Sell games"> Sell</a>
                 <div class="icon">
@@ -55,7 +57,7 @@
             <form class="checkout">
                 <div class="flex_col">
                     <h2>Game information</h2>
-                    <select name="category" class="sell_select">
+                    <select name="category" class="sell_select" title="Select genre">
                         <option value="action">Action</option>
                         <option value="adventure">Adventure</option>
                         <option value="racing">Racing</option>
@@ -64,18 +66,21 @@
                         <option value="shooter">Shooter</option>
                         <option value="strategy">Strategy</option>
                     </select>
-                    <select name="game_name" class="sell_select">
+                    <select name="game_name" class="sell_select" title="Seelct game">
                         <option value="pingpong">Ping Pong</option>
                         <option value="superduper">Super Duper</option>
                         <option value="black">Black</option>
                         <option value="racing">Racing</option>
                     </select>
-                    <button type="submit" name="submit_game" class="cta sell_select">Add</button>
+                    <button type="submit" name="submit_game" class="cta sell_select"
+                        title="Add game to sell">Add</button>
 
 
                     <h2>Deposit information</h2>
-                    <input type="text" name="bank_account_number" placeholder="Bank account number">
-                    <input type="text" name="bankaccout_holder" placeholder="Bankaccout holder">
+                    <input type="text" name="bank_account_number" placeholder="Bank account number"
+                        title="Bank account number">
+                    <input type="text" name="bankaccout_holder" placeholder="Bankaccout holder"
+                        title="Bank account holder name">
 
                 </div>
 
@@ -86,9 +91,12 @@
                         <div class="game_number">
                             <h3>Ping pong</h3>
                             <div>
-                                <button type="button" name="reduce-games" class="add_minus">-</button>
-                                <input type="text" name="number-of-games" value="1" class="number">
-                                <button type="button" name="add-games" class="add_minus">+</button>
+                                <button type="button" name="reduce-games" class="add_minus"
+                                    title="Add number of games">-</button>
+                                <input type="text" name="number-of-games" value="1" class="number"
+                                    title="number of games">
+                                <button type="button" name="add-games" class="add_minus"
+                                    title="Reduced number of games">+</button>
                             </div>
                         </div>
                         <span class="sum_each_game">9.99$</span>
@@ -99,9 +107,12 @@
                         <div class="game_number">
                             <h3>Super Duper</h3>
                             <div>
-                                <button type="button" name="reduce-games" class="add_minus">-</button>
-                                <input type="text" name="number-of-games" value="1" class="number">
-                                <button type="button" name="add-games" class="add_minus">+</button>
+                                <button type="button" name="reduce-games" class="add_minus"
+                                    title="Add number of games">-</button>
+                                <input type="text" name="number-of-games" value="1" class="number"
+                                    title="number of games">
+                                <button type="button" name="add-games" class="add_minus"
+                                    title="Reduced number of games">+</button>
                             </div>
                         </div>
                         <span class="sum_each_game">9.99$</span>
@@ -110,7 +121,7 @@
                         <span>Sum order</span>
                         <span>19.98$</span>
                     </div>
-                    <a href="sell_game_success.html" title="place order button" class="cta order">Place order</a>
+                    <a href="sell_game_success.html" title="Place order" class="cta order">Place order</a>
                 </div>
             </form>
         </div>
