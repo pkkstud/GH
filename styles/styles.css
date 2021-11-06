@@ -17,8 +17,16 @@ h1 {
     font-size: 2rem;
 }
 
+h1 {
+    margin: 5% 0 5% 0;
+}
+
 h2 {
     margin: 0;
+}
+
+h3 {
+    margin: 0%;
 }
 
 header {
@@ -39,24 +47,21 @@ button {
 }
 
 main {
+    display: flex;
+    margin-top: 8rem;
+    justify-content: center;
     margin-bottom: 3rem;
 }
 
 main input {
     border: 1px solid #1B203D;
-    height: 1.5rem;
+    height: 2rem;
     width: 15rem;
 }
 
 main select {
     border: 1px solid #1B203D;
-    height: 1.5rem;
-}
-
-.search_button {
     height: 2rem;
-    width: 40px;
-    padding: 0%;
 }
 
 i,
@@ -88,12 +93,6 @@ nav ul {
     padding: 2% 0% 0.5% 0%
 }
 
-main {
-    display: flex;
-    margin-top: 8rem;
-    justify-content: center;
-}
-
 footer {
     height: 25px;
     width: 100%;
@@ -109,8 +108,6 @@ footer {
     position: fixed;
     bottom: 5rem;
     right: 5rem;
-    border-radius: 0%;
-    size: 5x;
     color: #1B203D;
 }
 
@@ -144,6 +141,23 @@ footer {
     display: none;
 }
 
+.search_button {
+    height: 2rem;
+    width: 40px;
+    padding: 0%;
+}
+
+main .fa-shopping-cart {
+    padding: 4%;
+}
+
+.main_width {
+    width: 60%
+}
+
+/* ==============
+Index page
+============== */
 
 
 .carousel {
@@ -164,9 +178,6 @@ footer {
     font-size: 4vh;
 }
 
-h1 {
-    margin: 5% 0 5% 0;
-}
 
 .carousel_buttons {
     display: flex;
@@ -174,11 +185,6 @@ h1 {
     font-weight: bold;
     gap: 5%;
     margin-right: 5%;
-}
-
-
-.main_width {
-    width: 60%
 }
 
 .bestsellers_list {
@@ -206,10 +212,7 @@ h1 {
     border-radius: 0%;
     border: 1px solid #1B203D;
     padding: 2%;
-}
-
-main .fa-shopping-cart {
-    padding: 4%;
+    font-weight: bold;
 }
 
 
@@ -221,17 +224,9 @@ main .fa-shopping-cart {
     padding: 2%;
 }
 
-/* category page */
-
-select {
-    border-radius: 0%;
-    border: none;
-    height: 2rem;
-}
-
-h3 {
-    margin: 0%;
-}
+/* =============== 
+category page 
+===============*/
 
 .filter_sort {
     display: flex;
@@ -248,6 +243,10 @@ h3 {
     align-items: flex-end;
 }
 
+.filter_icon {
+    display: none;
+}
+
 .sort {
     display: flex;
     justify-content: right;
@@ -260,7 +259,9 @@ h3 {
     text-decoration: underline;
 }
 
-/* Game details page */
+/* ===============
+ Game details page 
+ ===============*/
 
 
 
@@ -307,7 +308,9 @@ h3 {
     justify-content: space-between;
 }
 
-/* Log in-create account page */
+/* ===============
+Log in-create account page 
+=============== */
 
 .log_in {
     display: flex;
@@ -320,7 +323,19 @@ h3 {
     text-align: center;
 }
 
-/* Account page */
+.log_in_button {
+    width: 5rem;
+    text-align: center;
+}
+
+.text {
+    color: #1B203D;
+    text-decoration: underline;
+}
+
+/* ===============
+Account page
+=============== */
 
 .account {
     display: grid;
@@ -340,7 +355,9 @@ h3 {
     height: 2rem;
 }
 
-/* Checkout and sell pages */
+/* ===============
+Checkout and sell pages
+=============== */
 
 .checkout {
     display: grid;
@@ -366,8 +383,19 @@ h3 {
     justify-content: space-between;
 }
 
+.sell_select {
+    width: 15rem;
+}
+
+.add_minus,
 .number {
-    width: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 1px solid #1B203D;
+    font-size: 1rem;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .sum_each_game {
@@ -391,7 +419,9 @@ h3 {
     margin-top: 1rem;
 }
 
-/* Contact page */
+/* ===============
+Contact page
+=============== */
 
 .contact {
     display: flex;
@@ -417,12 +447,18 @@ h3 {
 
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 910px) {
 
     nav,
-    .fa-shopping-cart,
-    .fa-user {
-        display: none;
+    .icon,
+    .filter,
+    .sort {
+        display: none !important;
+    }
+
+    .filter_icon {
+        display: inline;
+        color: #1B203D;
     }
 
     header {

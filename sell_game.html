@@ -24,8 +24,12 @@
                     <button type="submit" class="search_button"><i class="fas fa-search"></i> </button>
                 </form>
                 <a href="sell_game.html" title="Sell games"> Sell</a>
-                <a href="checkout.html" title="Shopping cart"><i class="fa fa-shopping-cart"></i></a>
-                <a href="log_in.html" title="Account"><i class="fas fa-user"></i></a>
+                <div class="icon">
+                    <a href="checkout.html" title="Shopping cart"><i class="fa fa-shopping-cart"></i></a>
+                </div>
+                <div class="icon">
+                    <a href="log_in.html" title="Account"><i class="fas fa-user"></i></a>
+                </div>
                 <div class="menu">
                     <label for="menu"><i class="fas fa-bars"></i></label>
                 </div>
@@ -58,7 +62,7 @@
                 <div class="flex_col">
 
                     <h2>Game information</h2>
-                    <select name="category">
+                    <select name="category" class="sell_select">
                         <option value="action">Action</option>
                         <option value="adventure">Adventure</option>
                         <option value="racing">Racing</option>
@@ -67,13 +71,13 @@
                         <option value="shooter">Shooter</option>
                         <option value="strategy">Strategy</option>
                     </select>
-                    <select name="game_name">
+                    <select name="game_name" class="sell_select">
                         <option value="pingpong">Ping Pong</option>
                         <option value="superduper">Super Duper</option>
                         <option value="black">Black</option>
                         <option value="racing">Racing</option>
                     </select>
-                    <button type="submit" name="submit_game" class="cta">Add</button>
+                    <button type="submit" name="submit_game" class="cta sell_select">Add</button>
 
 
                     <h2>Deposit information</h2>
@@ -89,9 +93,9 @@
                         <div class="game_number">
                             <h3>Ping pong</h3>
                             <div>
-                                <button type="button" name="add-games">+</button>
+                                <button type="button" name="reduce-games" class="add_minus">-</button>
                                 <input type="text" name="number-of-games" value="1" class="number">
-                                <button type="button" name="reduce-games">-</button>
+                                <button type="button" name="add-games" class="add_minus">+</button>
                             </div>
                         </div>
                         <span class="sum_each_game">9.99$</span>
@@ -102,9 +106,9 @@
                         <div class="game_number">
                             <h3>Super Duper</h3>
                             <div>
-                                <button type="button" name="add-games">+</button>
+                                <button type="button" name="reduce-games" class="add_minus">-</button>
                                 <input type="text" name="number-of-games" value="1" class="number">
-                                <button type="button" name="reduce-games">-</button>
+                                <button type="button" name="add-games" class="add_minus">+</button>
                             </div>
                         </div>
                         <span class="sum_each_game">9.99$</span>
@@ -121,7 +125,9 @@
         </div>
 
         <div>
-            <a href="contact.html" title="contact us"><i class="far fa-envelope fa-3x envelope"></i></a>
+            <div class="icon">
+                <a href="contact.html" title="contact us"><i class="fas fa-envelope fa-3x envelope"></i></a>
+            </div>
         </div>
     </main>
 
