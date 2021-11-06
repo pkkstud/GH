@@ -308,6 +308,15 @@ category page
     justify-content: space-between;
 }
 
+.details_cart {
+    float: right;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 /* ===============
 Log in-create account page 
 =============== */
