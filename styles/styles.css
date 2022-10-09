@@ -102,12 +102,16 @@ footer {
     margin-top: auto;
 }
 
+
+
+
+
 /* Class styling */
 
 .envelope {
     position: fixed;
     bottom: 5rem;
-    right: 5rem;
+    right: 3rem;
     color: #1B203D;
 }
 
@@ -148,17 +152,48 @@ footer {
 }
 
 main .fa-shopping-cart {
-    padding: 4%;
+    padding: 20%;
+    
 }
 
 .main_width {
     width: 60%
 }
 
+.sepcart {
+    display: flex;
+    margin-right: 5%;
+    
+}
+
 /* ==============
 Index page
 ============== */
 
+.toCart {
+    visibility: hidden;
+    color: #FFC400;
+    background-color: #1B203D;
+    align-self: center;
+}
+
+#header_cart {
+    position: relative;
+}
+
+#hamburger {
+    display: none;
+} 
+
+.cart_sum {
+    background-color: #FFC400;
+    color:#1B203D;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    padding: 0.5%;
+    font-size: 2vh;
+}
 
 .carousel {
     width: auto;
@@ -283,23 +318,6 @@ category page
     text-align: end;
 }
 
-.selected_button {
-    color: #1B203D;
-    background-color: #FFFFFF;
-    border-radius: 0%;
-    border: #1B203D;
-    padding: 2%;
-    text-decoration: underline;
-}
-
-.not_selected_button {
-    color: #FFFFFF;
-    background-color: #1B203D;
-    border-radius: 0%;
-    border: #1B203D;
-    padding: 2%;
-}
-
 .details {
     display: grid;
     grid-template-columns: 1fr 1.5fr 0.5fr;
@@ -312,9 +330,19 @@ category page
     float: right;
 }
 
+.add_one {
+    margin-right: 2%;
+    margin-top: 2%
+}
+
 .price {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+#new, #used {
+    height: 1rem;
+    width: 1rem;
 }
 
 /* ===============
@@ -454,32 +482,74 @@ Contact page
     align-self: flex-end;
 }
 
+.formError {
+    visibility: hidden;
+    color: #A80000;
+}
+
+.form_elements {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 @media only screen and (max-width: 910px) {
 
     nav,
-    .icon,
+    .hideicon,
     .filter,
     .sort {
         display: none;
     }
+    
 
     .filter_icon {
         display: inline;
         color: #1B203D;
     }
 
-    header {
-        height: 5rem;
+    #hamburger:checked ~ nav {
+        display: block;
     }
 
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    } 
+
+    nav li {
+        display: block;
+        padding: 1% 0%;
+        width: 100%;
+    } 
+    
     .menu {
-        display: inline-block;
+        display: block;
     }
+
+    header {
+        height: auto;
+    }
+
+    
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 2% 0% 0% 0%;
+    } 
+
+     
+   
+
+    #hamburger:checked~main {
+        margin-top: 25rem;
+    }
+
 
     .bestsellers_list {
-        display: grid;
         grid-template-columns: 1fr 1fr;
 
     }
@@ -498,6 +568,10 @@ Contact page
     header {
         padding-top: 2%;
     }
+    
+    .cart_sum {
+        font-size: 3vh;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -506,7 +580,6 @@ Contact page
 
     .bestsellers_list,
     .account {
-        display: grid;
         grid-template-columns: 1fr;
 
     }
