@@ -1,137 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta name="description" content="Shopping cart and checkout" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>Checkout</title>
     <link href="styles/styles.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/c279bd19f7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c279bd19f7.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Hotjar Tracking Code for https://luxury-bombolone-1571bb.netlify.app -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3122631,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3122631, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
         a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-</head>
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="main_width">
-            <section class="header_top">
+      <div class="main_width">
+        <section class="header_top">
+          <a href="index.html" title="Homepage"
+            ><img src=images/GameHub_Logo-300.png alt="GameHub logo"
+            class="header_logo"></a
+          >
 
-                <a href="index.html" title="Homepage"><img src=images/GameHub_Logo-300.png alt="GameHub logo"
-                        class="header_logo"></a>
+          <form class="search">
+            <input
+              type="text"
+              placeholder="Search games"
+              name="search"
+              title="Search field"
+              class="search_field"
+            />
+            <button
+              type="submit"
+              class="search_button hideicon"
+              title="Search button"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
 
-                <form class="search">
-                    <input type="text" placeholder="Search games" name="search" title="Search field"
-                        class="search_field">
-                    <button type="submit" class="search_button" title="Search button"><i class="fas fa-search"></i>
-                    </button>
-                </form>
-                <a href="sell_game.html" title="Sell games"> Sell</a>
-                <div class="icon">
-                    <a href="checkout.html" title="Shopping cart"><i class="fa fa-shopping-cart"></i></a>
-                </div>
-                <div class="icon">
-                    <a href="log_in.html" title="Account"><i class="fas fa-user"></i></a>
-                </div>
-                <div class="menu">
-                    <label for="menu"><i class="fas fa-bars"></i></label>
-                </div>
-            </section>
-            <nav>
-                <ul>
-                    <li><a href="category.html" title="New games">News</a></li>
-                    <li><a href="category.html" title="Action games">Action</a> </li>
-                    <li><a href="category.html" title="Adventure games">Adventure</a></li>
-                    <li><a href="category.html" title="Racing games">Racing</a></li>
-                    <li><a href="category.html" title="RPG games">RPG</a></li>
-                    <li><a href="category.html" title="Sport games">Sport</a></li>
-                    <li><a href="category.html" title="Shooter games">Shooter</a></li>
-                    <li><a href="category.html" title="Strategy games">Strategy</a></li>
-                </ul>
-            </nav>
-        </div>
+          <div class="icon" id="header_cart">
+            <a href="checkout.html" title="Go to checkout">
+              <i class="fa fa-shopping-cart"></i>
+            </a>
+            <div id="cartsum" class="cart_sum">0</div>
+          </div>
+          <div class="icon">
+            <a href="log_in.html" title="Account"
+              ><i class="fas fa-user"></i
+            ></a>
+          </div>
+
+          <label for="hamburger" class="menu"
+            ><i class="fa fa-bars" title="hamburger menu"></i
+          ></label>
+        </section>
+        <input type="checkbox" id="hamburger" />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="category.html?id=action" title="Action games">Action</a>
+            </li>
+            <li>
+              <a href="category.html?id=adventure" title="Adventure games"
+                >Adventure</a
+              >
+            </li>
+            <li>
+              <a href="category.html?id=racing" title="Racing games">Racing</a>
+            </li>
+            <li><a href="category.html?id=rpg" title="RPG games">RPG</a></li>
+            <li>
+              <a href="category.html?id=sport" title="Sport games">Sport</a>
+            </li>
+            <li>
+              <a href="category.html?id=shooter" title="Shooter games"
+                >Shooter</a
+              >
+            </li>
+            <li>
+              <a href="category.html?id=strategy" title="Strategy games"
+                >Strategy</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-
     <main>
-        <div class="main_width">
-            <h1>Checkout</h1>
-            <form class="checkout">
-                <div class="flex_col">
-                    <h2>Shipping Address</h2>
-                    <input type="text" placeholder="Address" title="Address">
-                    <input type="text" placeholder="Address 2" title="Address 2">
-                    <input type="text" placeholder="Postal code" title="Postal code">
-                    <input type="text" placeholder="City" title="city">
+      <div class="main_width">
+        <h1>Checkout</h1>
+        <form class="checkout" title="checkout form">
+          <div class="flex_col">
+            <h2>Shipping Address</h2>
+            <input type="text" placeholder="Address" title="Address" />
+            <input type="text" placeholder="Address 2" title="Address 2" />
+            <input type="text" placeholder="Postal code" title="Postal code" />
+            <input type="text" placeholder="City" title="city" />
 
-                    <h2>Credit card information</h2>
-                    <input type="text" placeholder="Card number" title="Card number">
-                    <input type="text" placeholder="Cardholder name" title="Cardholder name">
-                    <input type="text" placeholder="Expire date" title="Expire date">
-                    <input type="text" placeholder="CVV" title="CVV">
-                </div>
+            <h2>Credit card information</h2>
+            <input type="text" placeholder="Card number" title="Card number" />
+            <input
+              type="text"
+              placeholder="Cardholder name"
+              title="Cardholder name"
+            />
+            <input type="text" placeholder="Expire date" title="Expire date" />
+            <input type="text" placeholder="CVV" title="CVV" />
+          </div>
 
-                <div>
-                    <h2>Order summary</h2>
-                    <div class="summary_games">
-                        <img src="images/GameHub_covers.jpg" alt="Picture of Ping pong cover" class="cover_checkout" />
-                        <div class="game_number">
-                            <h3>Ping pong</h3>
-                            <div>
-                                <button type="button" name="reduce-games" class="add_minus"
-                                    title="Add number of games">+</button>
-                                <input type="text" name="number-of-games" value="1" class="number"
-                                    title="number of games">
-                                <button type="button" name="add-games" class="add_minus"
-                                    title="Reduced number of games">-</button>
-                            </div>
-                        </div>
-                        <span class="sum_each_game">59.90$</span>
-                    </div>
-                    <div class="summary_games">
-                        <img src="images/GameHub_covers2.jpg" alt="Picture of Super Duper cover"
-                            class="cover_checkout" />
-                        <div class="game_number">
-                            <h3>Super Duper</h3>
-                            <div>
-                                <button type="button" name="reduce-games" class="add_minus"
-                                    title="Add number of games">+</button>
-                                <input type="text" name="number-of-games" value="1" class="number"
-                                    title="number of games">
-                                <button type="button" name="add-games" class="add_minus"
-                                    title="Reduced number of games">-</button>
-                            </div>
-                        </div>
-                        <span class="sum_each_game">49.90$</span>
-                    </div>
-                    <div class="sum_order">
-                        <span>Sum order</span>
-                        <span>109.98$</span>
-                    </div>
-                    <a href="checkout_success.html" title="place order" class="cta order">Place order</a>
-                </div>
-
-
-            </form>
+          <div>
+            <h2>Order summary</h2>
+            <div id="summary"></div>
+            <div class="sum_order" id="ordersummary"></div>
+            <a
+              href="checkout_success.html"
+              title="place order"
+              class="cta order"
+              onclick="deleteStorage()"
+              >Place order</a
+            >
+          </div>
+        </form>
+      </div>
+      <div>
+        <div class="icon">
+          <a href="contact.html" title="contact us"
+            ><i class="fas fa-envelope fa-3x envelope"></i
+          ></a>
         </div>
-        <div>
-            <div class="icon">
-                <a href="contact.html" title="contact us"><i class="fas fa-envelope fa-3x envelope"></i></a>
-            </div>
-        </div>
+      </div>
     </main>
 
-
-    <footer> Copyright &copy;</footer>
-</body>
-
+    <footer>Copyright &copy;</footer>
+    <script src="js/games.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
 </html>
