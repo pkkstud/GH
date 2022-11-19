@@ -68,26 +68,31 @@ async function getData() {
     }
   };
   cartItems();
-  return cartItems;
 }
 
 getData();
 
 let sumOrder = () => {
-  if (cart.length !== 0) {
-    let amount = cart
-      .map((unit) => {
-        console.log(unit);
-        let { id, item } = unit;
-        let search = gameList.find((y) => y.id == id);
-        return item * search.price;
-      })
-      .reduce((a, b) => a + b, 0);
-    orderSummary.innerHTML = `<span>Sum order</span>
-    <span>$${amount}</span>`;
-    console.log(amount);
+  async function getData2() {
+    const response = await fetch(url);
+    const gameList = await response.json();
+    if (cart.length !== 0) {
+      let amount = cart
+        .map((unit) => {
+          console.log(unit);
+          let { id, item } = unit;
+          let search = gameList.find((y) => y.id == id);
+          return item * search.prices.price;
+        })
+        .reduce((a, b) => a + b, 0);
+      orderSummary.innerHTML = `<span>Sum order</span>
+    <span>${amount}</span>`;
+      console.log(amount);
+    }
   }
+  getData2();
 };
+
 let increase = (id) => {
   let selectedGame = id;
   let search = cart.find((data) => data.id === id);
@@ -99,9 +104,9 @@ let increase = (id) => {
   } else {
     search.item += 1;
   }
-  sessionStorage.setItem("storeCart", JSON.stringify(cart));
-  cartItems();
   update(id);
+
+  sessionStorage.setItem("storeCart", JSON.stringify(cart));
 };
 
 let reduce = (id) => {
@@ -118,7 +123,6 @@ let reduce = (id) => {
 
   update(id);
   cart = cart.filter((x) => x.item != 0);
-  cartItems();
   sessionStorage.setItem("storeCart", JSON.stringify(cart));
 };
 
@@ -129,7 +133,6 @@ let update = (id) => {
   sumOrder();
 };
 
-cartItems();
 sumOfCart();
 sumOrder();
 
