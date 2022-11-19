@@ -9,16 +9,22 @@ let sumOfCart = () => {
   cartSum.innerHTML = sum;
 };
 
-let cartItems = () => {
-  if (cart.length !== 0) {
-    return (summary.innerHTML = cart
-      .map((unit) => {
-        console.log(unit);
-        let { id, item } = unit;
-        let search = listItems.find((y) => y.id == id);
-        return `<div class="summary_games">
+const url =
+  "https://kronia.one/wpgamehub/wp-json/wc/store/products?category=16";
+
+async function getData() {
+  const response = await fetch(url);
+  const gameList = await response.json();
+  let cartItems = () => {
+    if (cart.length !== 0) {
+      return (summary.innerHTML = cart
+        .map((unit) => {
+          console.log(unit);
+          let { id, item } = unit;
+          let search = gameList.find((y) => y.id == id);
+          return `<div class="summary_games">
     <img
-      src="${search.img}"
+      src="${search.images[0].src}"
       alt="${search.name} cover"
       class="cover_checkout"
     />
@@ -53,14 +59,19 @@ let cartItems = () => {
         </button>
       </div>
     </div>
-    <span class="sum_each_game">$${search.price}</span>
+    <span class="sum_each_game">${search.prices.price}</span>
   </div>`;
-      })
-      .join(""));
-  } else {
-    return (summary.innerHTML = "The cart is empty");
-  }
-};
+        })
+        .join(""));
+    } else {
+      return (summary.innerHTML = "The cart is empty");
+    }
+  };
+  cartItems();
+  return cartItems;
+}
+
+getData();
 
 let sumOrder = () => {
   if (cart.length !== 0) {
@@ -68,7 +79,7 @@ let sumOrder = () => {
       .map((unit) => {
         console.log(unit);
         let { id, item } = unit;
-        let search = listItems.find((y) => y.id == id);
+        let search = gameList.find((y) => y.id == id);
         return item * search.price;
       })
       .reduce((a, b) => a + b, 0);
