@@ -2,7 +2,8 @@ let list = document.getElementById("listofgames");
 
 let cart = JSON.parse(sessionStorage.getItem("storeCart")) || [];
 
-const url = "http://kronia.one/wpgamehub/wp-json/wc/store/products?category=16";
+const url =
+  "https://kronia.one/wpgamehub/wp-json/wc/store/products?category=16";
 
 async function getData() {
   const response = await fetch(url);

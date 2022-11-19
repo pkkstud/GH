@@ -5,7 +5,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const noGames = document.getElementById("noGames");
 let cart = JSON.parse(sessionStorage.getItem("storeCart")) || [];
-const url = `http://kronia.one/wpgamehub/wp-json/wc/store/products?category=${id}`;
+const url = `https://kronia.one/wpgamehub/wp-json/wc/store/products?category=${id}`;
 
 function getHeader() {
   if (id == 19) {

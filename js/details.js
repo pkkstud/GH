@@ -5,7 +5,7 @@ const id = params.get("id");
 const detailsContainer = document.querySelector(".details");
 detailsContainer.innerHTML = "";
 let cart = JSON.parse(sessionStorage.getItem("storeCart")) || [];
-url = `http://kronia.one/wpgamehub/wp-json/wc/store/products?product=${id}`;
+url = `https://kronia.one/wpgamehub/wp-json/wc/store/products?product=${id}`;
 
 async function getDetails() {
   const response = await fetch(url);
