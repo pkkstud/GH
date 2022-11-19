@@ -5,14 +5,18 @@ const id = params.get("id");
 const detailsContainer = document.querySelector(".details");
 detailsContainer.innerHTML = "";
 let cart = JSON.parse(sessionStorage.getItem("storeCart")) || [];
+url = `http://kronia.one/wpgamehub/wp-json/wc/store/products?product=${id}`;
 
-function getDetails() {
-  for (let i = 0; i < listItems.length; i++) {
-    const element = listItems[i];
+async function getDetails() {
+  const response = await fetch(url);
+  const gameList = await response.json();
 
-    if (element.id === id) {
+  for (let i = 0; i < gameList.length; i++) {
+    const element = gameList[i];
+
+    if (element.id == id) {
       return (detailsContainer.innerHTML = `<div>
-        <img src="${element.img}" alt="${element.name} cover" class="bestsellers_cover" />
+        <img src="${element.images[0].src}" alt="${element.name} cover" class="bestsellers_cover" />
     </div>
     <div>
         <h2>${element.name}</h2>
@@ -39,7 +43,7 @@ function getDetails() {
         </section>
 
         <div>
-        <span class="price">$${element.price}</span>
+        <span class="price">$${element.prices.price}</span>
         
         
             

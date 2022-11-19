@@ -1,4 +1,4 @@
-const listItems = [
+/* const listItems = [
   {
     id: "101",
     name: "Ping Pong",
@@ -47,4 +47,4 @@ const listItems = [
     priceold: 49.99,
     category: "strategy",
   },
-];
+]; */
